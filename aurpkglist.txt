@@ -1,0 +1,10 @@
+albert
+albert-debug
+freetube
+spotify
+visual-studio-code-bin
+visual-studio-code-bin-debug
+woeusb
+yay
+yay-debug
+zoom
