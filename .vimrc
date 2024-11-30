@@ -8,6 +8,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'Jorengarenar/COBOl.vim'
 Plug 'tpope/vim-sensible'
 Plug 'elzr/vim-json'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -21,6 +22,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'smerrill/vcl-vim-plugin'
 Plug 'kien/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'ctrlpvim/ctrlp.vim'
+
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'beyondwords/vim-twig'
 " Plug 'tpope/vim-surround'
@@ -33,6 +36,9 @@ endif
 if has("win32unix")
     Plug 'tmux-plugins/vim-tmux'
 endif
+
+" Enable support for COBOL legacy code
+let cobol_legacy_code=1
 
 let git_version = system("git --version | cut -f 3 -d ' ' | sed -e 's/\\.//g'")
 if git_version >= 1850
