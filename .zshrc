@@ -33,6 +33,9 @@ ff() {
   vim $(fzf)
 }
 
+# Search inside files
+alias fi ='rg --column --line-number --no-heading --color=always . | fzf --ansi --delimiter : --preview "bat --style=numbers --color=always --highlight-line {2} {1}" --preview-window=right:60% | awk -F: "{print \$1 \":\" \$2}" | xargs -r vim'
+
 # Command to change directory using fzf
 fd() {
   local dir
@@ -100,3 +103,4 @@ alias ..='cd ..'
 
 # Set up fzf key bidings and fuzzy
 source <(fzf --zsh)
+
