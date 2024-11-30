@@ -1,6 +1,8 @@
 albert
 albert-debug
 freetube
+gnucobol
+gnucobol-debug
 spotify
 visual-studio-code-bin
 visual-studio-code-bin-debug

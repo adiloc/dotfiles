@@ -24,6 +24,7 @@ fzf
 garcon
 git
 github-cli
+gnucobol
 gparted
 gst-plugin-pipewire
 gvfs
@@ -70,6 +71,7 @@ pipewire-zeroconf
 qbittorrent
 ranger
 refind
+ripgrep
 ristretto
 scrot
 smartmontools
