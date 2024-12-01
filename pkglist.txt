@@ -73,6 +73,7 @@ ranger
 refind
 ripgrep
 ristretto
+screen
 scrot
 smartmontools
 smbclient
@@ -155,4 +156,3 @@ xorg-xrandr
 yay
 yay-debug
 zoom
-zsh
