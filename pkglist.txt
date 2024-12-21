@@ -9,11 +9,13 @@ bluez-utils
 btrfs-progs
 chromium
 cifs-utils
+cowsay
 displaycal
 dmenu
 docker
 docker-compose
 doublecmd-gtk2
+duckstation
 dunst
 efibootmgr
 exfatprogs
@@ -86,6 +88,7 @@ thunar-volman
 thunderbird
 timeshift
 tmux
+tmuxinator
 tree
 tumbler
 unzip

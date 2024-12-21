@@ -1,11 +1,12 @@
 albert
-albert-debug
+duckstation
+duckstation-debug
 freetube
 gnucobol
-gnucobol-debug
+ruby-xdg
 spotify
+tmuxinator
 visual-studio-code-bin
-visual-studio-code-bin-debug
 woeusb
 yay
 yay-debug
