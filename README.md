@@ -30,5 +30,5 @@ $ cd dotfiles
 then use GNU stow to create symlinks
 
 ```
-$ stow .
+$ stow --adopt .
 ```
