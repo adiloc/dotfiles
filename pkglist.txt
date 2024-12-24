@@ -1,3 +1,4 @@
+7zip
 albert
 arandr
 base
@@ -6,6 +7,7 @@ bat
 blueman
 bluez
 bluez-utils
+brightnessctl
 btrfs-progs
 chromium
 cifs-utils
@@ -59,7 +61,6 @@ networkmanager
 nitrogen
 npm
 ntfs-3g
-p7zip
 parole
 pasystray
 pavucontrol
@@ -99,6 +100,7 @@ vlc
 vulkan-intel
 vulkan-radeon
 wget
+wireguard-tools
 wireless_tools
 wireplumber
 woeusb

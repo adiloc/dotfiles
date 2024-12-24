@@ -1,6 +1,5 @@
 albert
 duckstation
-duckstation-debug
 freetube
 gnucobol
 ruby-xdg
