@@ -37,10 +37,8 @@ backup() {
         --exclude="/home/*/.cache" \
         --exclude="/var/cache" \
         --exclude="/tmp" \
-        --exclude="/home/*/.local" \
         --exclude="/home/*/Downloads" \
-        --exclude="/home/*/.thunderbird" \
-        --exclude="/home/*/arch-backup" \
+        --exclude="/home/*/.local/share/Trash" \
         /etc /home /var/lib/pacman/local --warning=no-file-changed
 
     echo "Backup complete! Files saved in $BACKUP_DIR"
