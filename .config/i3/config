@@ -31,6 +31,12 @@ exec --no-startup-id xrandr --output LVDS-1 --primary --mode 1366x768 --pos 0x10
 exec --no-startup-id nitrogen --restore
 bindsym $mod+Shift+Ctrl+L exec i3lock -c 000000
 
+# Increase brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+
+# Decrease brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
 #Audio volume
 exec --no-startup-id pasystray
 exec --no-startup-id blueman-applet
