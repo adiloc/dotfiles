@@ -8,6 +8,9 @@ export HISTFILE=~/.bash_history
 export HISTSIZE=100000
 export HISTCONTROL=ignoreboth:erasedups
 export HISTTIMEFORMAT=""
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export PATH=$PATH:/home/loc/.local/share/gem/ruby/3.3.0/bin
+
 shopt -s histappend       # Append history instead of overwriting
 shopt -s cdspell          # Correct minor spelling errors in `cd`
 shopt -s nocaseglob       # Case-insensitive filename matching
@@ -122,10 +125,10 @@ alias glarge="git rev-list --objects --all | git cat-file --batch-check | sort -
 # ---------------------------------------
 # Productivity Utilities
 # ---------------------------------------
-# Added an alias 'fi' for searching inside files using ripgrep (rg) combined with fzf for interactive selection.
-alias fi='rg --column --line-number --no-heading --color=always . | \
-fzf --ansi --delimiter : --preview "bat --style=numbers --color=always --highlight-line {2} {1}" \
---preview-window=right:60% | awk -F: "{print \$1 \":\" \$2}" | xargs -r vim'
+# Added an alias 'fif' for searching inside files using ripgrep (rg) combined with fzf for interactive selection.
+alias fif='rg --column --line-number --no-heading --color=always . | \
+    fzf --ansi --delimiter : --preview "bat --style=numbers --color=always --highlight-line {2} {1}" \
+    --preview-window=right:60% | awk -F: "{print \$1 \":\" \$2}" | sed "s/:3$//" | xargs -o -r vim'
 
 # ---------------------------------------
 # Final Configurations
