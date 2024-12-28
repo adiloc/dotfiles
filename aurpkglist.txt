@@ -2,9 +2,7 @@ albert
 duckstation
 freetube
 gnucobol
-ruby-xdg
 spotify
-tmuxinator
 visual-studio-code-bin
 woeusb
 yay

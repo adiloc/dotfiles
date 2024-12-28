@@ -50,6 +50,7 @@ lightdm
 lightdm-gtk-greeter
 linux
 linux-firmware
+lxappearance
 maim
 mousepad
 mpv
@@ -61,6 +62,7 @@ networkmanager
 nitrogen
 npm
 ntfs-3g
+pacman-contrib
 parole
 pasystray
 pavucontrol
@@ -76,6 +78,7 @@ ranger
 refind
 ripgrep
 ristretto
+ruby
 screen
 scrot
 smartmontools
@@ -89,7 +92,6 @@ thunar-volman
 thunderbird
 timeshift
 tmux
-tmuxinator
 tree
 tumbler
 unzip
