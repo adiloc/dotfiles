@@ -10,6 +10,8 @@ export HISTCONTROL=ignoreboth:erasedups
 export HISTTIMEFORMAT=""
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH=$PATH:/home/loc/.local/share/gem/ruby/3.3.0/bin
+export GTK_THEME=Adwaita-dark
+export QT_STYLE_OVERRIDE=plastique
 
 shopt -s histappend       # Append history instead of overwriting
 shopt -s cdspell          # Correct minor spelling errors in `cd`
