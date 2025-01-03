@@ -60,10 +60,12 @@ neofetch
 network-manager-applet
 networkmanager
 nitrogen
+nmap
 npm
 ntfs-3g
 pacman-contrib
 parole
+pass
 pasystray
 pavucontrol
 perl-image-exiftool
@@ -75,6 +77,7 @@ pipewire-pulse
 pipewire-zeroconf
 qbittorrent
 ranger
+rclone
 refind
 ripgrep
 ristretto
