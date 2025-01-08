@@ -1,10 +1,13 @@
 albert
+albert-debug
 duckstation
 freetube
 gnucobol
 spotify
 visual-studio-code-bin
 woeusb
+x3270
+x3270-debug
 yay
 yay-debug
 zoom

@@ -109,6 +109,7 @@ wireguard-tools
 wireless_tools
 wireplumber
 woeusb
+x3270
 xarchiver
 xautolock
 xclip
