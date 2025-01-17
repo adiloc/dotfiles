@@ -181,3 +181,9 @@ command! Ww w !sudo tee % >/dev/null
 set undofile
 set undodir=~/.vim/undo
 
+augroup mutt
+      autocmd!
+        autocmd BufRead,BufNewFile muttrc*,*.muttrc set filetype=muttrc
+          autocmd FileType muttrc source ~/.vim/syntax/neomuttrc.vim
+augroup END
+

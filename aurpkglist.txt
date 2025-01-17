@@ -1,11 +1,11 @@
 albert
 albert-debug
 duckstation
+duckstation-debug
 freetube
 gnucobol
+gnucobol-debug
 spotify
-visual-studio-code-bin
-woeusb
 x3270
 x3270-debug
 yay

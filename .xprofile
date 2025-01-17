@@ -1,0 +1,13 @@
+# Set dark theme for GTK and QT applications
+export GTK_THEME=Adwaita:dark
+
+# Ensure GTK apps use the dark theme
+export GTK2_RC_FILES=$HOME/.gtkrc-2.0
+export GTK3_SETTINGS_FILE=$HOME/.config/gtk-3.0/settings.ini
+
+# Set Qt applications to use GTK theme for consistency
+export QT_QPA_PLATFORMTHEME=gtk2
+
+# Set QT style override for dark mode
+export QT_STYLE_OVERRIDE=dark
+
