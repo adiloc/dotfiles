@@ -81,7 +81,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM=auto
 export GIT_PS1_DESCRIBE_STYLE=branch
 
-# # Colorful and informative Git prompt
+# Colorful and informative Git prompt
 PS1='[\u@\h \W$(__git_ps1 " (%s)")] \$ '
 
 # Load Git completion and prompt (install if missing)

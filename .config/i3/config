@@ -44,12 +44,13 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-#
+#-----------------------------
 # Windows management bidings
-#
+#-----------------------------
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
@@ -107,7 +108,7 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-#focus the parent container
+# focus the parent container
 bindsym $mod+a focus parent
 
 # focus the child container
