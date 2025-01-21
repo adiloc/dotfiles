@@ -5,6 +5,7 @@ duckstation-debug
 freetube
 gnucobol
 gnucobol-debug
+mutt-wizard
 spotify
 x3270
 x3270-debug
