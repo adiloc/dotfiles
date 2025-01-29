@@ -2,6 +2,7 @@
 alacritty
 albert
 arandr
+azure-cli
 base
 base-devel
 bat
@@ -23,6 +24,7 @@ efibootmgr
 exfatprogs
 exo
 firefox
+fluxcd
 freetube
 fzf
 git
@@ -45,6 +47,8 @@ intel-media-driver
 intel-ucode
 iwd
 kdeconnect
+kubectl
+lazydocker
 less
 libpulse
 libreoffice-fresh
@@ -113,6 +117,7 @@ x3270
 xarchiver
 xclip
 xdg-utils
+xdotool
 xf86-video-amdgpu
 xf86-video-ati
 xf86-video-nouveau

@@ -5,6 +5,8 @@ duckstation-debug
 freetube
 gnucobol
 gnucobol-debug
+lazydocker
+lazydocker-debug
 mutt-wizard
 spotify
 x3270
