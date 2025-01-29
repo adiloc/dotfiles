@@ -109,8 +109,8 @@ let NERDTreeShowHidden = 1
 noremap <Leader>md :InstantMarkdownPreview<CR>
 
 " autocomplete settings
-:set completeopt=longest,menuone
-:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
