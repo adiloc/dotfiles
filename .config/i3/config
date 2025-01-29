@@ -48,6 +48,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Windows management bidings
 #-----------------------------
 
+# bookmarking for unix chads
+bindsym $mod+Insert exec --no-startup-id xdotool type $(grep -v '^#' ~/.vimwiki/bookmarks.md | dmenu -i -l 50 | cut -d' ' -f1)
+bindsym $mod+b exec --no-startup-id ~/.scripts/snippets.sh
+
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
