@@ -15,21 +15,16 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
-Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-commentary'
 Plug 'chr4/nginx.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'smerrill/vcl-vim-plugin'
 Plug 'kien/ctrlp.vim'
-Plug 'pangloss/vim-javascript'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-
-" Plug 'editorconfig/editorconfig-vim'
-" Plug 'beyondwords/vim-twig'
-" Plug 'tpope/vim-surround'
-" Plug 'tpope/vim-haml'
+Plug 'sheerun/vim-polyglot'
+Plug 'joshdick/onedark.vim'
 
 if version >= 800
     Plug 'w0rp/ale'
@@ -39,45 +34,32 @@ if has("win32unix")
     Plug 'tmux-plugins/vim-tmux'
 endif
 
-" VimWiki configuration
-let g:vimwiki_list = [{'path': '~/.vimwiki/',
-                       \ 'syntax': 'markdown',
-                       \ 'ext': '.md'}]
-
-filetype plugin on
-"Uncomment to override defaults:
-""let g:instant_markdown_slow = 1
-""let g:vimwiki_autowriteall = 1
-let g:instant_markdown_autostart = 0
-""let g:instant_markdown_open_to_the_world = 1
-"let g:instant_markdown_allow_unsafe_content = 1
-""let g:instant_markdown_allow_external_content = 0
-"let g:instant_markdown_mathjax = 1
-""let g:instant_markdown_mermaid = 1
-"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
-""let g:instant_markdown_autoscroll = 0
-"let g:instant_markdown_port = 8888
-""let g:instant_markdown_python = 1
-let g:instant_markdown_theme = 'dark'
-
-
-" Enable support for COBOL legacy code
-let cobol_legacy_code=1
-
 let git_version = system("git --version | cut -f 3 -d ' ' | sed -e 's/\\.//g'")
 if git_version >= 1850
     Plug 'tpope/vim-fugitive'
 endif
 
-" Add plugins to &runtimepath
 call plug#end()
 
-set background=light
-colorscheme seoul256
-" transparent bg
-hi Normal guibg=NONE ctermbg=NONE
-set shortmess+=I
+" Enable syntax highlighting
+syntax on
+filetype plugin on
+filetype indent on
+
+" Set the color scheme and style
+let g:onedark_style = 'darker'
+colorscheme onedark
+highlight Normal guibg=#141414 ctermbg=NONE
+highlight CursorLine guibg=#202020 ctermbg=NONE
+
+" Enable support for COBOL legacy code
+let cobol_legacy_code=1
+
+" Enable true colors
+set termguicolors
+
 set cursorline
+set shortmess+=I
 set t_Co=256
 set number
 set tabstop=4
@@ -91,15 +73,11 @@ set showmatch
 set history=1000
 set showmode
 set hls is
-
-" JK motions: Line motions
-" map <Leader>j <Plug>(easymotion-j)
-" map <Leader>k <Plug>(easymotion-k)
 set laststatus=2
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set t_ut=
 
-" set mapleader
+" Set mapleader
 let mapleader = ','
 
 noremap <Leader>n  :NERDTreeToggle<CR>
@@ -108,7 +86,7 @@ let NERDTreeShowHidden = 1
 
 noremap <Leader>md :InstantMarkdownPreview<CR>
 
-" autocomplete settings
+" Autocomplete settings
 set completeopt=longest,menuone
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
@@ -116,6 +94,26 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+" VimWiki configuration
+let g:vimwiki_list = [{'path': '~/.vimwiki/',
+                       \ 'syntax': 'markdown',
+                       \ 'ext': '.md'}]
+
+" Uncomment to override defaults:
+"let g:instant_markdown_slow = 1
+"let g:vimwiki_autowriteall = 1
+let g:instant_markdown_autostart = 0
+"let g:instant_markdown_open_to_the_world = 1
+"let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_allow_external_content = 0
+"let g:instant_markdown_mathjax = 1
+"let g:instant_markdown_mermaid = 1
+"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+"let g:instant_markdown_autoscroll = 0
+"let g:instant_markdown_port = 8888
+"let g:instant_markdown_python = 1
+let g:instant_markdown_theme = 'dark'
 
 
 " Search files inside vim  
@@ -133,11 +131,11 @@ vnoremap <Leader>y :w !xclip -selection clipboard<CR><CR>
 " Paste from clipboard
 nnoremap <Leader>p :r !xclip -selection clipboard -o<CR>
 
-"toggle paste
+" Toggle paste
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
  
-"relative numbers
+" Relative numbers
 function! Numbertoggle()
   if(&relativenumber == 1)
     set norelativenumber
@@ -147,32 +145,13 @@ function! Numbertoggle()
 endfunc
 
 nnoremap <c-x> :call Numbertoggle()<cr>
-" exit insert mode
+" Exit insert mode
 inoremap jk <esc> 
 
 if version >= 800
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
 endif
-
-let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 command! Ww w !sudo tee % >/dev/null
