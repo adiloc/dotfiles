@@ -1,5 +1,6 @@
 albert
 albert-debug
+brave-bin
 duckstation
 duckstation-debug
 freetube
