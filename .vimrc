@@ -25,6 +25,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 
 if version >= 800
     Plug 'w0rp/ale'
