@@ -13,6 +13,8 @@ export GTK_THEME=Adwaita:dark
 export QT_STYLE_OVERRIDE=dark
 export QT_QPA_PLATFORMTHEME=gtk2
 
+set -o vi
+
 shopt -s histappend       # Append history instead of overwriting
 shopt -s cdspell          # Correct minor spelling errors in `cd`
 shopt -s nocaseglob       # Case-insensitive filename matching
@@ -32,9 +34,7 @@ alias fgrep="rg --line-number | fzf --ansi --preview 'rg --color=always -C {}'"
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-
-# Enhanced file and directory navigation
-alias cdf="cd \$(find . -type d | fzf)"
+eval $(thefuck --alias f)
 
 # ---------------------------------------
 # fzf Configuration
@@ -80,7 +80,7 @@ export GIT_PS1_SHOWUPSTREAM=auto
 export GIT_PS1_DESCRIBE_STYLE=branch
 
 # Colorful and informative Git prompt
-PS1='[\u@\h \W$(__git_ps1 " (%s)")] \$ '
+PS1='\[\033[1;31m\][\[\033[1;33m\]\u\[\033[1;32m\]@\[\033[1;34m\]\h \[\033[1;35m\]\w\[\033[1;31m\]]\[\033[0m\]$(__git_ps1 " (%s)") \$ '
 
 # Load Git completion and prompt (install if missing)
 if [ -f /usr/share/git/completion/git-prompt.sh ]; then
