@@ -114,6 +114,7 @@ alias gsl="git stash list"
 alias ghard="git reset --hard"
 alias gsoft="git reset --soft"
 alias gmixed="git reset --mixed"
+alias gcr="git add -A && git commit --amend"
 
 # Interactive Git workflows using fzf
 alias gcofz="git branch --sort=-committerdate | fzf | xargs git checkout"
@@ -135,4 +136,8 @@ alias fif='rg --column --line-number --no-heading --color=always . | \
 # ---------------------------------------
 # Final Configurations
 # ---------------------------------------
+
+
+#chromium contained.
+alias chd='xhost +local:root && docker run -d   --name chromium   --platform linux/amd64   --net host   --rm   --security-opt seccomp=unconfined   -v /etc/localtime:/etc/localtime:ro   -v /tmp/.X11-unix:/tmp/.X11-unix   -v /run/user/1000/pulse:/run/user/1000/pulse   -v /home/loc/Downloads:/home/chromium/Downloads   -v /home/loc/containers/chromium/:/home/chromium/.config/chromium   -e DISPLAY=:0   -e PULSE_SERVER=unix:/run/user/1000/pulse/native   --device /dev/dri   --device /dev/snd   -v /dev/shm:/dev/shm   chromium-container:latest   --use-gl=egl'
 
