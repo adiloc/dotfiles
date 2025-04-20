@@ -6,8 +6,8 @@ freetube
 gnucobol
 lazydocker
 mutt-wizard
+python-async-timeout
 ruby-xdg
-simplex-desktop-appimage
 spotify
 tmuxinator
 x3270
