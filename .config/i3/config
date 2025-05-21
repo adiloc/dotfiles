@@ -17,8 +17,8 @@ exec --no-startup-id gsettings set org.gnome.desktop.interface cursor-theme 'Adw
 
 # screen lock, idle time, and DPMS settings
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
-exec --no-startup-id xset s 600
-exec --no-startup-id xset dpms 0 0 900
+exec --no-startup-id xfce4-power-manager
+
 bindsym $mod+Shift+Ctrl+L exec xset s activate
 bindsym $mod+Shift+Ctrl+M exec systemctl suspend
 
@@ -31,8 +31,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id picom -b --config ~/.picom.conf
 
-# screen and brightness settings
-exec --no-startup-id xrandr --output LVDS-1 --primary --mode 1366x768 --pos 0x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal
+# screen and brightness colors settings
+exec --no-startup-id xrandr --output eDP-1 --gamma 0.95:0.90:0.73
+exec --no-startup-id xrandr --output eDP-1 --primary --mode 1366x768 --pos 0x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal
+
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
