@@ -1,4 +1,4 @@
-# It will not be overwritten, so edit it as you like.
+
 # i3 config file (v4)
 
 # mod key and terminal configuration
@@ -21,6 +21,7 @@ exec --no-startup-id xfce4-power-manager
 
 bindsym $mod+Shift+Ctrl+L exec xset s activate
 bindsym $mod+Shift+Ctrl+M exec systemctl suspend
+bindsym $mod+Shift+Ctrl+P exec arandr
 
 # additional utilities
 exec --no-startup-id albert
@@ -32,8 +33,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id picom -b --config ~/.picom.conf
 
 # screen and brightness colors settings
-exec --no-startup-id xrandr --output eDP-1 --gamma 0.95:0.90:0.73
-exec --no-startup-id xrandr --output eDP-1 --primary --mode 1366x768 --pos 0x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal
+exec --no-startup-id xrandr --output eDP-1 --primary --mode 1368x768
 
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
@@ -54,7 +54,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 #-----------------------------
 
 # bookmarking for unix chads
-bindsym $mod+Insert exec --no-startup-id xdotool type $(grep -v '^#' ~/.vimwiki/bookmarks.md | dmenu -i -l 50 | cut -d' ' -f1)
+bindsym $mod+Insert exec --no-startup-id xdotool type -- "$(grep -v '^#' ~/.vimwiki/bookmarks.md | dmenu -i -l 50)"
 bindsym $mod+b exec --no-startup-id ~/.scripts/snippets.sh
 
 # use Mouse+$mod to drag floating windows to their wanted position
