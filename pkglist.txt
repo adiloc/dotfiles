@@ -28,7 +28,6 @@ exo
 ffmpegthumbnailer
 fio
 firefox
-fluxcd
 freetube
 fzf
 gajim
@@ -70,7 +69,6 @@ lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 linux
 linux-firmware
-lshw
 lvm2
 lxappearance
 maim
