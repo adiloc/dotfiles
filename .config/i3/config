@@ -30,7 +30,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id picom -b --config ~/.picom.conf
+exec --no-startup-id picom --backend xrender -f &
 
 # screen and brightness colors settings
 exec --no-startup-id xrandr --output eDP-1 --primary --mode 1368x768
@@ -204,5 +204,5 @@ bindsym $mod+r mode "resize"
 
 # i3bar configuration
 bar {
-        status_command i3status -c /home/loc/.config/i3/i3status.conf
+        status_command i3status -c /home/hires/.config/i3/i3status.conf
 }

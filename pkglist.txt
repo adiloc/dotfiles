@@ -1,155 +1,134 @@
-7zip
-alacritty
-albert
-android-tools
-arandr
-base
-base-devel
-bat
-blueman
-bluez-utils
-brave-bin
-brightnessctl
-btop
-btrfs-progs
-chromium
-cifs-utils
-code
-cowsay
-dmenu
-docker
-docker-compose
-dosfstools
-duckstation
-dunst
-efibootmgr
-exfatprogs
-exo
-ffmpegthumbnailer
-fio
-firefox
-freetube
-fzf
-gajim
-gimp
-git
-github-cli
-gitleaks
-gnome-themes-extra
-gnucobol
-gparted
-gptfdisk
-grub
-gst-libav
-gst-plugin-pipewire
-gtk-engine-murrine
-gtk-engines
-gvfs
-gvfs-mtp
-gvfs-smb
-htop
-i3-wm
-i3blocks
-i3lock
-i3status
-intel-media-driver
-intel-media-sdk
-intel-ucode
-iwd
-kubectl
-kwallet-pam
-lazydocker
-less
-libpulse
-libreoffice-fresh
-libva-intel-driver
-libva-utils
-lightdm
-lightdm-gtk-greeter
-lightdm-gtk-greeter-settings
-linux
-linux-firmware
-lvm2
-lxappearance
-maim
-man-db
-media-player-info
-mesa-utils
-monero-gui
-mousepad
-mtpfs
-mutt-wizard
-nano
-ncdu
-neofetch
-neomutt
-neovim
-network-manager-applet
-networkmanager
-nftables
-nitrogen
-nmap
-npm
-ntfs-3g
-openresolv
-pacman-contrib
-pass
-pasystray
-pavucontrol
-perl-image-exiftool
-picom
-pipewire
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-pipewire-zeroconf
-podman
-qbittorrent
-ranger
-rclone
-ripgrep
-ristretto
-rsync
-samba
-screen
-scrot
-smartmontools
-spotify
-stow
-thefuck
-thunar
-thunar-archive-plugin
-thunar-media-tags-plugin
-thunar-volman
-tlp
-tlp-rdw
-tmux
-tmuxinator
-traceroute
-ttf-jetbrains-mono-nerd
-unzip
-veracrypt
-vim
-vlc
-vulkan-intel
-vulkan-radeon
-wget
-wireguard-tools
-wireless_tools
-wireplumber
-wireshark-qt
-x3270
-xarchiver
-xclip
-xdg-utils
-xdotool
-xf86-video-amdgpu
-xf86-video-ati
-xf86-video-nouveau
-xf86-video-vmware
-xfce4-power-manager
-xorg-xhost
-xss-lock
-yay
-zoom
-zram-generator
+7zip 25.01-1
+acpi 1.8-2
+alacritty 0.16.1-1
+arandr 0.1.11-5
+base 3-2
+base-devel 1-2
+bat 0.26.1-1
+bc 1.08.2-1
+blueman 2.4.6-1
+bluez-utils 5.85-1
+brightnessctl 0.5.1-3
+btop 1.4.5-1
+btrfs-progs 6.17.1-1
+cava 0.10.6-1
+chromium 143.0.7499.40-1
+cifs-utils 7.4-1
+cronie 1.7.2-2
+dmenu 5.4-1
+dosfstools 4.2-5
+dunst 1.13.0-1
+efibootmgr 18-3
+exfatprogs 1.3.0-1
+fastfetch 2.56.0-1
+ffmpegthumbnailer 2.2.4-1
+fio 3.41-1
+firefox 146.0-1
+fzf 0.67.0-1
+gajim 2.4.0-2
+gimp 3.0.6-2
+git 2.52.0-2
+glmark2 2023.01-2
+gnome-themes-extra 1:3.28-1
+gptfdisk 1.0.10-1
+grub 2:2.14rc1.r54.g29f3131a-2
+gst-libav 1.26.9-1
+gst-plugin-pipewire 1:1.4.9-2
+gvfs 1.58.0-2
+gvfs-mtp 1.58.0-2
+gvfs-smb 1.58.0-2
+htop 3.4.1-1
+i3-wm 4.24-1
+i3blocks 1.5-4
+i3lock 2.15-3
+i3status 2.15-1
+intel-media-driver 25.3.4-1
+intel-media-sdk 23.2.2-5
+intel-ucode 20251111-1
+iwd 3.10-1
+jack2 1.9.22-1
+kitty 0.44.0-1
+kwallet-pam 6.5.4-1
+less 1:685-1
+libdvdcss 1.5.0-1
+libreoffice-fresh 25.8.3-3
+libva-intel-driver 2.4.1-5
+libva-utils 2.22.0-1
+lightdm 1:1.32.0-6
+lightdm-gtk-greeter 1:2.0.9-1
+lightdm-gtk-greeter-settings 1.2.3-3
+linux 6.17.9.arch1-1
+linux-firmware 20251125-2
+lvm2 2.03.37-1
+lxappearance 0.6.4-2
+maim 5.8.1-3
+man-db 2.13.1-1
+media-player-info 26-1
+mesa-utils 9.0.0-7
+mousepad 0.6.5-1
+mpv 1:0.40.0-7
+mtpfs 1.1-5
+nano 8.7-1
+ncdu 2.9.2-1
+network-manager-applet 1.36.0-1
+networkmanager 1.54.2-1
+nftables 1:1.1.6-1
+nmap 7.98-3
+ntfs-3g 2022.10.3-2
+openresolv 3.17.0-1
+pacman-contrib 1.13.0-1
+pasystray 0.8.2-2
+pavucontrol 1:6.2-1
+perl-image-exiftool 13.36-1
+picom 12.5-3
+pipewire-alsa 1:1.4.9-2
+pipewire-pulse 1:1.4.9-2
+pipewire-zeroconf 1:1.4.9-2
+podman 5.7.0-1
+qbittorrent 5.1.4-1
+qjackctl 1.0.4-2
+qpwgraph 0.9.7-1
+ranger 1.9.4-4
+reflector 2023-3
+ripgrep 15.1.0-1
+ristretto 0.13.4-1
+rtkit 0.13-3
+samba 2:4.23.3-2
+screen 5.0.1-3
+scrot 1.12.1-1
+smartmontools 7.5-1
+smplayer 25.6.0-1
+stow 2.4.1-1
+stress-ng 0.19.06-1
+thefuck 3.32-11
+thunar 4.20.6-1
+thunar-archive-plugin 0.6.0-1
+thunar-media-tags-plugin 0.6.0-1
+thunar-volman 4.20.0-2
+tlp 1.9.0-3
+tlp-rdw 1.9.0-3
+tmux 3.6_a-1
+tp_smapi 0.45-37
+traceroute 2.1.6-1
+ttf-jetbrains-mono-nerd 3.4.0-1
+vdpauinfo 1.5-2
+vim 9.1.1908-1
+vlc 3.0.21-32
+vulkan-intel 1:25.3.1-2
+vulkan-nouveau 1:25.3.1-2
+vulkan-radeon 1:25.3.1-2
+wget 1.25.0-3
+wireless_tools 30.pre9-4
+xarchiver 0.5.4.26-1
+xclip 0.13-6
+xdg-utils 1.2.1-2
+xdotool 3.20211022.1-2
+xf86-video-amdgpu 25.0.0-1
+xf86-video-ati 1:22.0.0-2
+xf86-video-nouveau 1.0.18-1
+xfce4-power-manager 4.20.0-3
+xorg-xhost 1.0.10-1
+xorg-xinit 1.4.4-1
+xss-lock 0.3.0.r30.gac39fdc-1
+xterm 404-1
+zram-generator 1.2.1-1
