@@ -52,9 +52,10 @@ export FZF_DEFAULT_COMMAND='find . -type f -not -path "*/\.git/*" -not -path "*/
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Function to search and `cd` into a directory
-function cdf() {
+cdf() {
   local dir
-  dir=$(find ${1:-.} -type d 2> /dev/null | fzf +m) && cd "$dir"
+  dir=$(find "${1:-$HOME}" -type d -print 2>/dev/null | fzf --height 40%) &&
+  cd "$dir"
 }
 
 # Function to find and kill processes using fzf
@@ -130,13 +131,15 @@ alias glarge="git rev-list --objects --all | git cat-file --batch-check | sort -
 # ---------------------------------------
 # Added an alias 'fif' for searching inside files using ripgrep (rg) combined with fzf for interactive selection.
 alias fif='rg --column --line-number --no-heading --color=always . | \
-    fzf --ansi --delimiter : --preview "bat --style=numbers --color=always --highlight-line {2} {1}" \
-    --preview-window=right:60% | awk -F: "{print \$1 \":\" \$2}" | sed "s/:3$//" | xargs -o -r vim'
+  fzf --ansi --delimiter : \
+      --preview "bat --style=numbers --color=always --highlight-line {2} {1}" \
+      --preview-window=right:60% | \
+  awk -F: "{print \"+\" \$2, \$1}" | \
+  xargs -o -r vim'
 
 # ---------------------------------------
 # Final Configurations
 # ---------------------------------------
-
 
 #chromium contained.
 alias chd='xhost +local:root && docker run -d   --name chromium   --platform linux/amd64   --net host   --rm   --security-opt seccomp=unconfined   -v /etc/localtime:/etc/localtime:ro   -v /tmp/.X11-unix:/tmp/.X11-unix   -v /run/user/1000/pulse:/run/user/1000/pulse   -v /home/loc/Downloads:/home/chromium/Downloads   -v /home/loc/containers/chromium/:/home/chromium/.config/chromium   -e DISPLAY=:0   -e PULSE_SERVER=unix:/run/user/1000/pulse/native   --device /dev/dri   --device /dev/snd   -v /dev/shm:/dev/shm   chromium-container:latest   --use-gl=egl'
