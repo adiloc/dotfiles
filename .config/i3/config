@@ -37,10 +37,11 @@ exec --no-startup-id xrandr --output eDP-1 --primary --mode 1368x768
 
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym $mod+Shift+d exec --no-startup-id ~/.scripts/toggle-display.sh
 
 # screenshot bindings
-bindsym Print exec --no-startup-id maim ~/Pictures/screenshot-full-$(date +%F-%T).png
-bindsym Shift+Print exec --no-startup-id bash -c "maim -i $(xdotool getactivewindow) ~/Pictures/screenshot-window-$(date +%F-%T).png"
+bindsym Print exec --no-startup-id maim ~/Pictures/Screenshots/screenshot-full-$(date +%F-%T).png
+bindsym Shift+Print exec --no-startup-id bash -c "maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/screenshot-window-$(date +%F-%T).png"
 
 # audio volume control
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -48,6 +49,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# scripts
+bindsym $mod+Shift+a exec ~/.scripts/runappimage.sh
 
 #-----------------------------
 # Windows management bidings
@@ -205,4 +209,5 @@ bindsym $mod+r mode "resize"
 # i3bar configuration
 bar {
         status_command i3status -c /home/loc/.config/i3/i3status.conf
+        output eDP-1
 }
