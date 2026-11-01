@@ -40,8 +40,8 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 bindsym $mod+Shift+d exec --no-startup-id ~/.scripts/toggle-display.sh
 
 # screenshot bindings
-bindsym Print exec --no-startup-id maim ~/Pictures/Screenshots/screenshot-full-$(date +%F-%T).png
-bindsym Shift+Print exec --no-startup-id bash -c "maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/screenshot-window-$(date +%F-%T).png"
+bindsym Print exec --no-startup-id maim ~/Pictures/Screenshots/screenshot-full-$(date +%F-%T).png && notify-send "PrtSc full"
+bindsym Shift+Print exec --no-startup-id bash -c "maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/screenshot-window-$(date +%F-%T).png" && notify-send "PrtSc window"
 
 # audio volume control
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -52,7 +52,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # scripts
 bindsym $mod+Shift+a exec ~/.scripts/runappimage.sh
-
+bindsym $mod+Shift+s exec --no-startup-id ~/.scripts/minio-bisync.sh
 #-----------------------------
 # Windows management bidings
 #-----------------------------
