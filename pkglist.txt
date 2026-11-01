@@ -3,6 +3,7 @@ alacritty
 albert
 android-tools
 arandr
+arch-install-scripts
 atool
 base
 base-devel
@@ -13,6 +14,7 @@ brave-bin
 brightnessctl
 btop
 btrfs-progs
+cava
 chromium
 cifs-utils
 code
@@ -22,13 +24,17 @@ darktable
 dmenu
 docker
 docker-compose
+docker-sbx
+dolphin-emu
 dosfstools
 duckstation
 dunst
 efibootmgr
 esptool
+evolution
 exfatprogs
 exo
+fceux
 fdupes
 ffmpegthumbnailer
 fio
@@ -60,9 +66,11 @@ i3-wm
 i3blocks
 i3lock
 i3status
+inkscape
 intel-media-driver
 intel-media-sdk
 intel-ucode
+iperf3
 iwd
 kubectl
 kwallet-pam
@@ -80,6 +88,7 @@ linux-firmware
 lvm2
 lxappearance
 maim
+mame
 man-db
 media-player-info
 mesa-utils
@@ -119,6 +128,7 @@ ranger
 rclone
 ripgrep
 ristretto
+rmg
 rsync
 samba
 scrcpy
@@ -130,6 +140,8 @@ sops
 spotify
 sshfs
 stow
+stress-ng
+tcpdump
 thefuck
 thunar
 thunar-archive-plugin
@@ -152,6 +164,7 @@ wireguard-tools
 wireless_tools
 wireplumber
 wireshark-qt
+wol
 x3270
 xarchiver
 xclip
